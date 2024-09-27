@@ -6,7 +6,10 @@
   - ![屏幕截图 2024-09-26 201744](https://github.com/user-attachments/assets/076dc30a-dd80-4fb4-85f4-4f9cf603abce)
   - ![屏幕截图 2024-09-26 201756](https://github.com/user-attachments/assets/f9a4129e-afba-487d-bb74-fc3d54347e2d)
   - ![屏幕截图 2024-09-26 202337](https://github.com/user-attachments/assets/fbf24f0a-645e-49fa-8ad1-68eb948adc86)
-3, how to use c++ to add capsule compomenet to the root compoment
+3, how to use c++ to add capsule compomenet, staticmesh component, projectileSpawnPoint(scenecomponent) to the root compoment
   - ![屏幕截图 2024-09-26 204912](https://github.com/user-attachments/assets/bc5d12fe-b8da-461b-8741-8ab6e7167bb1)
-  - ![屏幕截图 2024-09-26 204946](https://github.com/user-attachments/assets/2f462bd2-79b5-4e47-b799-7487c4c07e55)
+  - ![屏幕截图 2024-09-26 211600](https://github.com/user-attachments/assets/86eae99d-feb1-479f-8485-461a20850b64)
+  - ![屏幕截图 2024-09-26 211549](https://github.com/user-attachments/assets/0907af79-2b21-4579-95d1-6eda20e71c8f)
+
+
 
