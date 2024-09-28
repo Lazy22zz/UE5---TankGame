@@ -10,6 +10,8 @@
   - ![屏幕截图 2024-09-26 204912](https://github.com/user-attachments/assets/bc5d12fe-b8da-461b-8741-8ab6e7167bb1)
   - ![屏幕截图 2024-09-26 211600](https://github.com/user-attachments/assets/86eae99d-feb1-479f-8485-461a20850b64)
   - ![屏幕截图 2024-09-26 211549](https://github.com/user-attachments/assets/0907af79-2b21-4579-95d1-6eda20e71c8f)
+4, visual scripting interface: create a blueprint inheritate the c++ class
+  - ![屏幕截图 2024-09-27 200924](https://github.com/user-attachments/assets/af820ba0-13a5-4c9b-a241-11bcd9d0d049)
 
 
 
