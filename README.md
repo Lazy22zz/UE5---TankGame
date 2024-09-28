@@ -16,7 +16,8 @@
   - instance: gaming running scene
   - default: default base value of base pawn.
   - ![屏幕截图 2024-09-27 202001](https://github.com/user-attachments/assets/056f67cb-91a6-4b96-ae34-8b25c07b883e)
-  - ![屏幕截图 2024-09-27 202038](https://github.com/user-attachments/assets/719a785a-c7bf-4111-888a-2bec9d870a00)
+  - ![屏幕截图 2024-09-27 203648](https://github.com/user-attachments/assets/cfc74573-c15e-4561-95ee-c19e04d7940e)
+
 
 
 
