@@ -12,6 +12,11 @@
   - ![屏幕截图 2024-09-26 211549](https://github.com/user-attachments/assets/0907af79-2b21-4579-95d1-6eda20e71c8f)
 4, visual scripting interface: create a blueprint inheritate the c++ class
   - ![屏幕截图 2024-09-27 200924](https://github.com/user-attachments/assets/af820ba0-13a5-4c9b-a241-11bcd9d0d049)
+5, UPROPERTY SPECIFIES
+  - instance: gaming running scene
+  - default: buleprint editing scene
+  - ![屏幕截图 2024-09-27 202001](https://github.com/user-attachments/assets/056f67cb-91a6-4b96-ae34-8b25c07b883e)
+  - ![屏幕截图 2024-09-27 202038](https://github.com/user-attachments/assets/719a785a-c7bf-4111-888a-2bec9d870a00)
 
 
 
