@@ -34,6 +34,7 @@
   - Dont forget to add releverant .h file for components
   - after the coding, you will get a new class setting
   - ![屏幕截图 2024-09-28 203527](https://github.com/user-attachments/assets/a4847161-c17c-430c-9bfb-5bda70fb974e)
+  -  Hint: when changing the view, dont move the camera component, just the springarm, cuz springarm will avoid the obstacle.
 
 
 
