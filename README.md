@@ -35,6 +35,7 @@
   - after the coding, you will get a new class setting
   - ![屏幕截图 2024-09-28 203527](https://github.com/user-attachments/assets/a4847161-c17c-430c-9bfb-5bda70fb974e)
   -  Hint: when changing the view, dont move the camera component, just the springarm, cuz springarm will avoid the obstacle.
+  -  
 9, possessing the pawn
    - enable to pick which pawn that player start, pawn-> auto possess player
    - ![屏幕截图 2024-09-28 205050](https://github.com/user-attachments/assets/fcff0182-e5ba-4740-b96c-592398e28e8c)
