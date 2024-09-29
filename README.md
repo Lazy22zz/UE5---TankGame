@@ -1,4 +1,5 @@
 # Tank
+- project 
 1, compoment, attachment, rootcompoment
   - ![屏幕截图 2024-09-26 202044](https://github.com/user-attachments/assets/b41cb2ea-141b-433b-a16e-504c509ac466)
 2, forward declarartion
@@ -25,6 +26,15 @@
 7, Deriving a child class
   - purpose: because of child class inheritate from baspawn, but their child has their own specific properties.
   - ![屏幕截图 2024-09-28 200810](https://github.com/user-attachments/assets/8386fea7-33f6-4c8b-b76c-3e21d33b522e)
+8, creating a child class for tank
+  - give a spring arm and camera component
+  - ![屏幕截图 2024-09-28 202900](https://github.com/user-attachments/assets/25cf66ac-83ea-4f26-b6be-bed72690ca87)
+  - ![屏幕截图 2024-09-28 202916](https://github.com/user-attachments/assets/4afdb403-a746-474b-8bfd-6c93eef4284c)
+  - Dont forget to give a constructor!!!!! (ATank())
+  - Dont forget to add releverant .h file for components
+  - after the coding, you will get a new class setting
+  - ![屏幕截图 2024-09-28 203527](https://github.com/user-attachments/assets/a4847161-c17c-430c-9bfb-5bda70fb974e)
+
 
 
 
