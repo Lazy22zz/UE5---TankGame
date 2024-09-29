@@ -21,6 +21,11 @@
   - creating your specific own pannel in your blueprint "Details"
   - ![屏幕截图 2024-09-27 211729](https://github.com/user-attachments/assets/f2408889-1f09-469d-8559-4c74cefb4de4)
   - ![屏幕截图 2024-09-27 211659](https://github.com/user-attachments/assets/c6039ad3-3745-444f-beb6-e951c43988a6)
+  - 
+7, Deriving a child class
+  - purpose: because of child class inheritate from baspawn, but their child has their own specific properties.
+  - ![屏幕截图 2024-09-28 200810](https://github.com/user-attachments/assets/8386fea7-33f6-4c8b-b76c-3e21d33b522e)
+
 
 
 
