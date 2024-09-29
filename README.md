@@ -47,6 +47,12 @@
   - Hint: project setting -> input -> Axix Mapping
   -  ![屏幕截图 2024-09-28 211931](https://github.com/user-attachments/assets/7a0f102b-458e-483b-8a5c-dec81d2d6249)
   - PlayerInputComponent -> BindAxis(TEXT("MoveForward"), this, &ATank::Move), this mean this pawn, & means address of the function.
+11, Local offset : local vs world direction
+  - as we all know, local 's direction is sometimes different than world's direction.
+  - ![屏幕截图 2024-09-28 213738](https://github.com/user-attachments/assets/ad173245-caa0-49f3-9639-76fdb73415eb)
+  - AddLocalOffset()
+  - ![屏幕截图 2024-09-28 214716](https://github.com/user-attachments/assets/22161027-5102-42c4-95e3-02e222ac05f7)
+
 
 
 
