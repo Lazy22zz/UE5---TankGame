@@ -39,6 +39,14 @@
 9, possessing the pawn
    - enable to pick which pawn that player start, pawn-> auto possess player
    - ![屏幕截图 2024-09-28 205050](https://github.com/user-attachments/assets/fcff0182-e5ba-4740-b96c-592398e28e8c)
+-
+10, Handling the input : Axix Mapping (of tank)
+  - because our basepwan has two childs, one is tank, one is turret, so we dont need turret can access player input,
+  - so, we need to move virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override  to tank.h
+  - Hint in ue5 , we need super:: for .cpp to clarify the parents' friend virtual function Super::SetupPlayerInputComponent(PlayerInputComponent)
+  - Hint: project setting -> input -> Axix Mapping
+  -  ![屏幕截图 2024-09-28 211931](https://github.com/user-attachments/assets/7a0f102b-458e-483b-8a5c-dec81d2d6249)
+  - PlayerInputComponent -> BindAxis(TEXT("MoveForward"), this, &ATank::Move), this mean this pawn, & means address of the function.
 
 
 
