@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Pawn.h"
 #include "BasePawn.generated.h"
-
+#include "Misc/App.h"
 
 UCLASS()
 class TOONTANKS_API ABasePawn : public APawn
@@ -17,7 +17,9 @@ public:
 	ABasePawn();
 
 
-
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
 private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
@@ -32,7 +34,9 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	class USceneComponent* ProjectileSpawnPoint;
 
-
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 	
 

@@ -18,14 +18,10 @@ class TOONTANKS_API ATank : public ABasePawn
 public:
 	ATank();
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+	
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArmCom;
@@ -47,9 +43,5 @@ private:
 	void Move(float value);
 	// user input
 	void Turn(float value);
-
-	// enable playercontroller
-	APlayerController* PlayerControllerRef;
-
 
 };

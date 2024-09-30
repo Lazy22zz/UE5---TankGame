@@ -13,7 +13,6 @@
 		"typescript.tsc.autoDetect": "off",
 		"npm.autoDetect": "off",
 		"cSpell.words": [
-			"Gameplay",
 			"Subobject",
 			"UPROPERTY"
 		],
