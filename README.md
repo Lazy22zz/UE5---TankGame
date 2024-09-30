@@ -1,23 +1,29 @@
 # Tank
-- project 
+- project
+- 
 1, compoment, attachment, rootcompoment
   - ![屏幕截图 2024-09-26 202044](https://github.com/user-attachments/assets/b41cb2ea-141b-433b-a16e-504c509ac466)
+  - 
 2, forward declarartion
   - avoid forgetting to add #include .h file if we just want to add a pointer
   - ![屏幕截图 2024-09-26 201744](https://github.com/user-attachments/assets/076dc30a-dd80-4fb4-85f4-4f9cf603abce)
   - ![屏幕截图 2024-09-26 201756](https://github.com/user-attachments/assets/f9a4129e-afba-487d-bb74-fc3d54347e2d)
   - ![屏幕截图 2024-09-26 202337](https://github.com/user-attachments/assets/fbf24f0a-645e-49fa-8ad1-68eb948adc86)
+  - 
 3, how to use c++ to add capsule compomenet, staticmesh component, projectileSpawnPoint(scenecomponent) to the root compoment
   - ![屏幕截图 2024-09-26 204912](https://github.com/user-attachments/assets/bc5d12fe-b8da-461b-8741-8ab6e7167bb1)
   - ![屏幕截图 2024-09-26 211600](https://github.com/user-attachments/assets/86eae99d-feb1-479f-8485-461a20850b64)
   - ![屏幕截图 2024-09-26 211549](https://github.com/user-attachments/assets/0907af79-2b21-4579-95d1-6eda20e71c8f)
+  - 
 4, visual scripting interface: create a blueprint inheritate the c++ class
   - ![屏幕截图 2024-09-27 200924](https://github.com/user-attachments/assets/af820ba0-13a5-4c9b-a241-11bcd9d0d049)
+  - 
 5, UPROPERTY SPECIFIES and Enable editing in event graph
   - instance: gaming running scene
   - default: default base value of base pawn.
   - ![屏幕截图 2024-09-27 202001](https://github.com/user-attachments/assets/056f67cb-91a6-4b96-ae34-8b25c07b883e)
   - ![屏幕截图 2024-09-27 203648](https://github.com/user-attachments/assets/cfc74573-c15e-4561-95ee-c19e04d7940e)
+  - 
 6, Exposing The Components
   - creating your specific own pannel in your blueprint "Details"
   - ![屏幕截图 2024-09-27 211729](https://github.com/user-attachments/assets/f2408889-1f09-469d-8559-4c74cefb4de4)
@@ -26,6 +32,7 @@
 7, Deriving a child class
   - purpose: because of child class inheritate from baspawn, but their child has their own specific properties.
   - ![屏幕截图 2024-09-28 200810](https://github.com/user-attachments/assets/8386fea7-33f6-4c8b-b76c-3e21d33b522e)
+  - 
 8, creating a child class for tank
   - give a spring arm and camera component
   - ![屏幕截图 2024-09-28 202900](https://github.com/user-attachments/assets/25cf66ac-83ea-4f26-b6be-bed72690ca87)
@@ -47,11 +54,45 @@
   - Hint: project setting -> input -> Axix Mapping
   -  ![屏幕截图 2024-09-28 211931](https://github.com/user-attachments/assets/7a0f102b-458e-483b-8a5c-dec81d2d6249)
   - PlayerInputComponent -> BindAxis(TEXT("MoveForward"), this, &ATank::Move), this mean this pawn, & means address of the function.
+ - 
 11, Local offset : local vs world direction
   - as we all know, local 's direction is sometimes different than world's direction.
   - ![屏幕截图 2024-09-28 213738](https://github.com/user-attachments/assets/ad173245-caa0-49f3-9639-76fdb73415eb)
   - AddLocalOffset()
   - ![屏幕截图 2024-09-28 214716](https://github.com/user-attachments/assets/22161027-5102-42c4-95e3-02e222ac05f7)
+ - 
+12, decide the tank moving speed
+  - DeltaTime is different in frame works, based on the working of functions by CPU
+  - ![屏幕截图 2024-09-29 200011](https://github.com/user-attachments/assets/e49771f4-7766-4367-b2b5-8aa28e36aef5)
+  - so the DeltaLocation = deltaTime * speed * value, (value decided by axix mapping)
+  - To find the deltaTime of the pawn, using: UGameplayStatics::GetWorldDeltaSeconds(    )
+  - ![屏幕截图 2024-09-29 202541](https://github.com/user-attachments/assets/37eac70f-e578-4554-a943-86c1ac3892dd)
+  - ![屏幕截图 2024-09-29 202531](https://github.com/user-attachments/assets/c845a025-6fa6-49bc-8c5d-45fa06fd7fb1)
+ - 
+13, Sweeping
+  - Identify does two object has collision
+  - only require the rootcomponent collison is on or off
+  - collision -> collision present.
+  - in addlocaloffset, addlocalrotation, true means the enable the collision.
+ - 
+14, decide the tank rotate/turn
+  - playerinput component bindaxis
+  - Create a TurnRate variable
+  - Create Turn function
+  - Using FRotator 
+  - using AddActorLocalRotation(DeltaRotation, true)
+  - ![屏幕截图 2024-09-29 210616](https://github.com/user-attachments/assets/5b58233a-4420-4ae8-beb5-e909c0c85d5c)
+15, Hit result deisplay & cast
+  - before to start to show cursor, turret no need controller action, move
+  -   protected:
+	virtual void BeginPlay() override;
+  - to tank.h
+  - APlayerController::GetHitResultUnderCursor
+  - APawn::GetController
+  - issue: APawn:: controller is AController, is parent; APlayerController, is child.
+  - cast<a>(b), a: type to change, b: pointer
+
+
 
 
 
