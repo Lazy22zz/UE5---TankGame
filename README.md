@@ -82,6 +82,7 @@
   - Using FRotator 
   - using AddActorLocalRotation(DeltaRotation, true)
   - ![屏幕截图 2024-09-29 210616](https://github.com/user-attachments/assets/5b58233a-4420-4ae8-beb5-e909c0c85d5c)
+ - -
 15, Hit result deisplay & cast
   - before to start to show cursor, turret no need controller action, move
   -   protected:
@@ -93,7 +94,17 @@
   - cast<a>(b), a: type to change, b: pointer, (the function pointed by parent)
   - ![屏幕截图 2024-09-29 213315](https://github.com/user-attachments/assets/1ddb868f-ff8a-4699-aff6-f6e2842649ef)
   - ![屏幕截图 2024-09-29 213425](https://github.com/user-attachments/assets/1e2db918-edd1-4a31-846b-78349c341f84)
- - 
+  - move tick function into tank.h, cuz no need it in basepawn
+  - check each tick, if click action exist, get info of HitResult
+  - ![屏幕截图 2024-09-29 220215](https://github.com/user-attachments/assets/95d35202-abec-4cd4-8466-b80132ab5d7f)
+ - ![屏幕截图 2024-09-29 220221](https://github.com/user-attachments/assets/411804da-a77e-4bc4-98fe-863fe793d160)
+- if hitresult get, we can show it by DrawDebugSphere
+- for the cursor, we can use HitResult.ImpactPoint to display
+- reference for more details in ue5: https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Chaos/Chaos/FDebugDrawQueue/DrawDebugSphere?application_version=5.4
+- ![屏幕截图 2024-09-29 221315](https://github.com/user-attachments/assets/c3b3cee1-3363-4429-af60-9ce400286d3f)
+
+
+
 
 
 
