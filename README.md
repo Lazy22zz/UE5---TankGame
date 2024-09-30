@@ -90,7 +90,12 @@
   - APlayerController::GetHitResultUnderCursor
   - APawn::GetController
   - issue: APawn:: controller is AController, is parent; APlayerController, is child.
-  - cast<a>(b), a: type to change, b: pointer
+  - cast<a>(b), a: type to change, b: pointer, (the function pointed by parent)
+  - ![屏幕截图 2024-09-29 213315](https://github.com/user-attachments/assets/1ddb868f-ff8a-4699-aff6-f6e2842649ef)
+  - ![屏幕截图 2024-09-29 213425](https://github.com/user-attachments/assets/1e2db918-edd1-4a31-846b-78349c341f84)
+ - 
+
+
 
 
 
