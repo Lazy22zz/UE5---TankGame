@@ -123,7 +123,9 @@ https://github.com/user-attachments/assets/bc1685ca-825e-4768-bf1c-721007400895
   - solution1:
   - 
 
-https://github.com/user-attachments/assets/93116489-ec73-4c7f-a22d-d212fc1d9c55
+https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
+
+
 -
 
 
