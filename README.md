@@ -118,7 +118,7 @@ https://github.com/user-attachments/assets/22e5c4e2-ac09-4c13-bf25-6e16be3546f6
   - 
 
 https://github.com/user-attachments/assets/bc1685ca-825e-4768-bf1c-721007400895
-  - solution 1: add blocking volumn to the edge of the world. Place actors panel->volumn->blocking volumn
+  - solution 1: add blocking volumn to the edge of the world. Place actors panel->volumn->blocking volumn, make the visibility (in collision presents) is block.
   - solution 2: using FMath::RInterpTo(TurretMesh->GetComponentRotation(),LookAtRotation, UGameplayStatics::GetWorldDeltaSeconds(this), 5.f); 5.f can be changed by what you want, to decide the speed of interpto.
 
 
