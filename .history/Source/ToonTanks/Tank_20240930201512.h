@@ -26,6 +26,9 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+protected:
+	// Create a rotate function for turret, including tank, and enemy
+	void RotateTurret(FVector LookAtTarget); 
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")

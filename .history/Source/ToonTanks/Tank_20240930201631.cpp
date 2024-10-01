@@ -36,11 +36,8 @@ void ATank::Tick(float DeltaTime)
             12,
             FColor::Red,
             false,
-            -1.f
-        );
-        
-        RotateTurret(HitResult.ImpactPoint);
-    }
+            -1.f);
+            }
 
 }
 
@@ -54,6 +51,10 @@ void ATank::BeginPlay()
 	
 }
 
+void ATank::RotateTurret(FVector LookAtTarget)
+{
+    
+}
 
 // Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)

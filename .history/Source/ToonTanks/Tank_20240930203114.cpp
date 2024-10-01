@@ -36,11 +36,11 @@ void ATank::Tick(float DeltaTime)
             12,
             FColor::Red,
             false,
-            -1.f
-        );
+            -1.f);
+        }
+
         
-        RotateTurret(HitResult.ImpactPoint);
-    }
+        TurretMesh.SetWorldRotation(RotateTurret(PlayerControllerRef));
 
 }
 

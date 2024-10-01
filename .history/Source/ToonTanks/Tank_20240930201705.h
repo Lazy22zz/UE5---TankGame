@@ -27,6 +27,7 @@ protected:
 	virtual void BeginPlay() override;
 
 
+
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	class USpringArmComponent* SpringArmCom;

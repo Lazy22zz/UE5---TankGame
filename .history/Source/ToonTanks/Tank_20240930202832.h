@@ -26,6 +26,8 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	// using the RotateTurret 
+	void Rotate(FVector LookAtTarget);
 
 private:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
