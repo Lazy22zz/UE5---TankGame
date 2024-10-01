@@ -114,8 +114,9 @@
   -  
 
 https://github.com/user-attachments/assets/22e5c4e2-ac09-4c13-bf25-6e16be3546f6
-  - issue 2: fuzzy snapping, <span style="color:red">It looks like UE5.4 fixed this issue, so the source code does not use Solution 2's code.</span>
-  - 
+  - issue 2: fuzzy snapping, 
+  - <span style="color:red">it looks like ue5.4 fix this issue, so the source code does not use the solution 2's code.</span>
+
 
 https://github.com/user-attachments/assets/bc1685ca-825e-4768-bf1c-721007400895
   - solution 1: add blocking volumn to the edge of the world. Place actors panel->volumn->blocking volumn, make the visibility (in collision presents) is block.
