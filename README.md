@@ -114,7 +114,7 @@
   -  
 
 https://github.com/user-attachments/assets/22e5c4e2-ac09-4c13-bf25-6e16be3546f6
-  - issue 2: fuzzy snapping
+  - issue 2: fuzzy snapping, <span style="color:red">It looks like UE5.4 fixed this issue, so the source code does not use Solution 2's code.</span>
   - 
 
 https://github.com/user-attachments/assets/bc1685ca-825e-4768-bf1c-721007400895
