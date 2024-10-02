@@ -134,7 +134,7 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - in beginplay function, identify the tank first, which is UGamePlayStatics::GetPlayerPawn(this, 0)
 - because ATank is a child, so we need to use cast<>()
 - create a private property: firerange, editeverywhere
-- 
+- compare, if less than the range, go for the rotateturret(FVector pointLocation), craeted in Tank.h
 
 
 
