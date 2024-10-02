@@ -127,6 +127,14 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 
 
 -
+17， create tower class, and enable when tank is in its firerange, they will look at tank
+- create a tower class, tick function and beginplay function
+- in private, create a class ATank* Tank, to eanble to get Tank's location
+- find the distance, using FVector::Dist(), and GetWorldLocation()
+- in beginplay function, identify the tank first, which is UGamePlayStatics::GetPlayerPawn(this, 0)
+- because ATank is a child, so we need to use cast<>()
+- create a private property: firerange, editeverywhere
+- 
 
 
 
