@@ -23,7 +23,6 @@ ABasePawn::ABasePawn()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Point"));
 	ProjectileSpawnPoint -> SetupAttachment(TurretMesh);
-
 }
 
 void ABasePawn::RotateTurret(FVector LookAtTarget)
@@ -34,7 +33,7 @@ void ABasePawn::RotateTurret(FVector LookAtTarget)
 }
 
 void ABasePawn::Fire(){
-	FVector ProjectileSpawnPointLocation = ProjectileSpawnPoint->GetComponentLocation();
+	FVector Location = Location -> GetComponentLocation();
 	DrawDebugSphere(
 		GetWorld(),
 		ProjectileSpawnPointLocation,

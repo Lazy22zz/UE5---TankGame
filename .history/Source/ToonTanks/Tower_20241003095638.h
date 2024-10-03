@@ -30,6 +30,4 @@ private:
 	FTimerHandle FireRateTimerHandle; 
 	float FireRate = 2.f; // fire rate
 	void CheckFireCondition();
-
-	bool InFireRange(); 
 };

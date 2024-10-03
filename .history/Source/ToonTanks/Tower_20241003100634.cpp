@@ -18,7 +18,7 @@ void ATower::BeginPlay()
 
 void ATower::Tick(float DeltaTime)
 {
-    if (InFireRange())
+    if (InFireRange)
     {
         RotateTurret(Tank -> GetActorLocation());
     }
@@ -27,7 +27,7 @@ void ATower::Tick(float DeltaTime)
 
 void ATower::CheckFireCondition()
 {
-    if (InFireRange())
+    if (InFireRange)
     {
         Fire();
     }

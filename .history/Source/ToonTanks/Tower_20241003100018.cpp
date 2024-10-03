@@ -12,38 +12,25 @@ void ATower::BeginPlay()
 
     Tank = Cast<ATank>(UGameplayStatics::GetPlayerPawn(this, 0)); // 0 means playerInt
 
-    GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ATower::CheckFireCondition, FireRate, true); // true means enable loop
+    GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ATower::CheckFireCondition, FireRate, true);
 
 }
 
 void ATower::Tick(float DeltaTime)
-{
-    if (InFireRange())
-    {
-        RotateTurret(Tank -> GetActorLocation());
-    }
-    
-}
-
-void ATower::CheckFireCondition()
-{
-    if (InFireRange())
-    {
-        Fire();
-    }
-    
-}
-
-bool ATower::InFireRange()
 {
     if (Tank)
     {
         float range = FVector::Dist(GetActorLocation(), Tank -> GetActorLocation());
         if (FireRange >= range)
         {
-            return true;
+            RotateTurret(Tank -> GetActorLocation());
         }
-    }
 
-    return false;
+    }
+    
+}
+
+void ATower::CheckFireCondition()
+{
+
 }

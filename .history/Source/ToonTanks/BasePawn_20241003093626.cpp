@@ -23,7 +23,6 @@ ABasePawn::ABasePawn()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Point"));
 	ProjectileSpawnPoint -> SetupAttachment(TurretMesh);
-
 }
 
 void ABasePawn::RotateTurret(FVector LookAtTarget)
@@ -34,15 +33,16 @@ void ABasePawn::RotateTurret(FVector LookAtTarget)
 }
 
 void ABasePawn::Fire(){
-	FVector ProjectileSpawnPointLocation = ProjectileSpawnPoint->GetComponentLocation();
+	FVector Location = Location -> GetComponentLocation();
 	DrawDebugSphere(
-		GetWorld(),
-		ProjectileSpawnPointLocation,
-		25.f,
-		12,
-		FColor::Red,
-		false,
-		3.f);
-
+		
+		float Radius = 100.0f;
+		int32 Segments = 12;
+		FColor Color = FColor::Red;
+		bool bPersistentLines = false;
+		float LifeTime = 3.0f;
+		uint8 DepthPriority = 0;
+		float Thickness = 1.0f;
+	)
 }
 
