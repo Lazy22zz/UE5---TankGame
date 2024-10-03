@@ -135,6 +135,25 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - because ATank is a child, so we need to use cast<>()
 - create a private property: firerange, editeverywhere
 - compare, if less than the range, go for the rotateturret(FVector pointLocation), craeted in Tank.h
+- 
+18, Draw a fire function
+- because tower and tank has same fire() option, create it in basepawn
+- using Action Mappings (similiar to the axis mapping), BindAction(TEXT(“Fire”), IE_Pressed
+ OR IE_Released, this, callback), {callback which function}
+- using the draw debug sphere for fire() function:https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Chaos?application_version=5.1
+- 
+19, Create a Timers
+- Purpose: enable each 2 second, the tower will fire if the tank is in its firerange
+- using  GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &ATower::CheckFireCondition, FireRate, true); *In the BeginPlay()*
+- REF:https://dev.epicgames.com/documentation/en-us/unreal-engine/gameplay-timers?application_version=4.27
+- because we get check tank and wheter the tank is in the firerange, so we need to rearrange a new InFireRange() to avoid duplicated codes.
+-
+20, set a projectile class & make it a blueprint
+- create a new actor class, which is used for projectile
+- remeber to set it to 1, blueprintvisible; 2, rootcomponent is it
+-
+21, 
+
 
 
 
