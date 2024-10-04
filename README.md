@@ -152,7 +152,25 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - create a new actor class, which is used for projectile
 - remeber to set it to 1, blueprintvisible; 2, rootcomponent is it
 -
-21, 
+21, spawn the projectile
+- using GetWorld()->SpawnActor<>(), SpawnActor<AProjectile>(UClass, Location, Rotation)
+- TSubclassOf<class AProjectile> ProjectileClass, is going to create a variable that hold the reference to any subclass of AProjectile, for helping to identify which type of projectile to spawn in the game.
+-
+22, move the projectile
+- create a new component in projectile files, class UProjectileMovementComponent* ProjectileMoveComp;
+- give it two initial properties, which are ProjectileMoveComp -> MaxSpeed = 1300.f; ProjectileMoveComp -> InitialSpeed = 1300.f;
+- Hints: movement is not part of Root Component!!!!!
+-
+23, Hit Event
+- *Read the ref first!!!* :https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/Components/UPrimitiveComponent/OnComponentHit?application_version=4.27
+- using ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+- for the UFunction, we need to call back a function, which holds UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit
+- !!!! Hit event is high level, staticmeshcomponent is inherited by UprimitiveComponent, so we can use !!!!!
+- ![屏幕截图 2024-10-03 215623](https://github.com/user-attachments/assets/f8662264-7feb-4bd3-9cc7-08a2be50de47)
+-  Delegate is a type of event that allows for communication between different parts of your game. Delegates are essentially function pointers that can be bound to one or more functions, enabling event-driven programming. Delegates are used to handle events. When an event occurs, the delegate broadcasts it to all bound functions, which then execute in response
+
+
+
 
 
 
