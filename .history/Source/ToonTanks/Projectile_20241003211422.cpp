@@ -25,7 +25,9 @@ void AProjectile::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectile::OnHit);
+	// setup initialSpeed, MaxSpeed
+	float InitialSpeed = 0.f;
+	float MaxSpeed = 30.f;
 	
 }
 
@@ -36,9 +38,3 @@ void AProjectile::Tick(float DeltaTime)
 
 }
 
-void AProjectile::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
-{
-	UE_LOG(LogTemp, Warning, TEXT("On Hit: %s"), *HitComp->GetName());
-	UE_LOG(LogTemp, Warning, TEXT("On Hit: %s"), *OtherActor->GetName());
-	UE_LOG(LogTemp, Warning, TEXT("On Hit: %s"), *OtherComp->GetName());
-}

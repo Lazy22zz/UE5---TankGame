@@ -30,7 +30,4 @@ private:
 	UPROPERTY(VisibleAnywhere, Category= "Movement")
 	class UProjectileMovementComponent* ProjectileMoveComp;
 
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
-
 };

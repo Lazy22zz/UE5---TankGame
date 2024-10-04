@@ -27,10 +27,7 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Projectile", meta = (AllowPrivateAccess = "true"))
 	class UStaticMeshComponent* ProjectileMesh;
 
-	UPROPERTY(VisibleAnywhere, Category= "Movement")
+	UPROPERTY(VisibleAnywhere)
 	class UProjectileMovementComponent* ProjectileMoveComp;
-
-	UFUNCTION()
-	void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 };
