@@ -168,6 +168,34 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - !!!! Hit event is high level, staticmeshcomponent is inherited by UprimitiveComponent, so we can use !!!!!
 - ![屏幕截图 2024-10-03 215623](https://github.com/user-attachments/assets/f8662264-7feb-4bd3-9cc7-08a2be50de47)
 -  Delegate is a type of event that allows for communication between different parts of your game. Delegates are essentially function pointers that can be bound to one or more functions, enabling event-driven programming. Delegates are used to handle events. When an event occurs, the delegate broadcasts it to all bound functions, which then execute in response
+-
+24, Health Component
+- We need to identify two components :
+- UActorComponent : No transform, No attachment
+- USceneComponent : Has transform, Support attachment
+- ![屏幕截图 2024-10-04 134331](https://github.com/user-attachments/assets/b61051cc-9f48-4d8b-8435-33997619b611)
+- 1, So we use UActorComponent for Health Component
+- 2, using the OnTakeAnyDamage Delegate, which is OnTakeAnyDamage.AddDynamic(this, callback function)
+- 3, create the callback function: DamageTaken(AActor *DamagedActor, float Damage, const UDamageType *DamageType, class AController *Instigator, AActor *DamageCauser)
+- 4, then we need to bind the function to which pawn, using: GetOwner()->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::DamageTaken)
+- Hint: Because the health component can be multiple objects, so GetOwner() will find which pawn has HealthComponent, if it does, just use it in startGame.
+-
+25, Apply Damage
+- using UGameplayStatics::ApplyDamage(Damaged Actor, Damage Amount, Instigator, Damage Causer, Damage Type)
+- use ApplyDamage function under the OnHit()
+- Damaged Actor : OtherActor (In clarify in OnHit())
+- Damage Amout : Need to be clarify
+- Instigator : type of controller, and it will find the projectiles' controllers
+- !!! We know that projectiles' nums, location will be changed by player, so we need to setOwner() by each new projectile created!!!
+- In Fire() function of BasePawn(), we created the projectile, so we need to record these projectils!
+- using: auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, Location, Rotation); projectile -> SetOwner(this)
+- then in OnHit(), do auto MyOwner = GetOwner(); if (MyOwner == nullptr) return; auto MyOwnerInstigator = MyOwner->GetInstigatorController();
+- Damage Cusor: This
+- Damage Type: because we didnt create multi damage types, so we just need to use: auto DamageTypeClass = UDamageType::StaticClass();
+- Ref :https://dev.epicgames.com/documentation/en-us/unreal-engine/API/Runtime/Engine/GameFramework/UDamageType/?application_version=4.27
+- the :UGameplayStatics::ApplyDamage(OtherActor, Damage_Amount, MyOwnerInstigator, this, DamageTypeClass);
+- and using Destory() to remove the shooted-projectile
+- also, we can use UE_LOG() in DamageTaken() of Health.h to see the status of tank.
 
 
 
