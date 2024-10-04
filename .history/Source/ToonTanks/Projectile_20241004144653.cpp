@@ -4,8 +4,6 @@
 #include "Projectile.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
-#include "GameFramework//DamageType.h"
-#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AProjectile::AProjectile()
