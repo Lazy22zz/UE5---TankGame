@@ -204,7 +204,7 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - ![屏幕截图 2024-10-05 194636](https://github.com/user-attachments/assets/1cfd282a-8c53-4fd1-b563-e8a7d622d8b8)
 - create a blueprint base on this c++ class, called ToonBaseGame
 - delte the tank in the scene
-- change the gamemode to the created one
+- change the gamemode to the created one, in project settings.
 - let game strater to be the pawn tank appear.
 
 
