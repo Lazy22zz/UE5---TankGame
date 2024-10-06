@@ -196,6 +196,17 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - the :UGameplayStatics::ApplyDamage(OtherActor, Damage_Amount, MyOwnerInstigator, this, DamageTypeClass);
 - and using Destory() to remove the shooted-projectile
 - also, we can use UE_LOG() in DamageTaken() of Health.h to see the status of tank.
+-
+26， The Game Mode Class
+- We need to identify two classes:
+- 1, AGameModeBase : Rules of the game, win condition
+- 2, AGameMode : Match state, Multiplayer matches
+- ![屏幕截图 2024-10-05 194636](https://github.com/user-attachments/assets/1cfd282a-8c53-4fd1-b563-e8a7d622d8b8)
+- create a blueprint base on this c++ class, called ToonBaseGame
+- delte the tank in the scene
+- change the gamemode to the created one
+- let game strater to be the pawn tank appear.
+
 
 
 
