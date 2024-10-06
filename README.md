@@ -206,6 +206,32 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - delte the tank in the scene
 - change the gamemode to the created one, in project settings.
 - let game strater to be the pawn tank appear, change the default pawn class in bp_toonbasegamemode
+-
+27, Actor died
+- ![屏幕截图 2024-10-06 103030](https://github.com/user-attachments/assets/a45c215f-50a5-491f-8393-4e61e1cfe113)
+- step 1, create a HandleDestruction() for baseActor() function to handle sound, visula effect
+- use super::HandleDestruction() callback in tank.h and tower.h
+- for tower, we need destroy() to disappear the tower object
+- for tank, we need SetActorHiddenInGame(true) and SetActorTickEnabled(false) to only allow player have a died vision if tank is destroy
+- step 2, create a ActorDied(AActor* DeadActor) in the toontankgamemode
+- check the deadactor is a tank or not, create class ATank* Tank in private, and create a protected: beginplay() to initialize it. 
+- use super::BeginPlay() from the system
+- use Tank = Cast<ATank>(UGamePlayStics::GetPlayerPawn(this, 0)) to initialize the Tank. {remember ATank is ACtor, which is inherited by APawn}
+- then in ActorDied(AActor* DeadActor), check if deadactor == tank, (no need to check the tank is null)
+- if so, tank->handledestruction, and tank -> disableInput
+- because we need to use APlayerController *PlayerController in disableInput, go back to Tank.h
+- the name PlayerControllerref's name is awful, so select it, use f2 to total rename
+- then we need to see does this playercontroller exsit or not, so we need to create a get function {const} to get the private property in tank.h
+- then make show mosue cursor disabled
+- ![屏幕截图 2024-10-06 115018](https://github.com/user-attachments/assets/6185ac4f-f950-449f-b979-893fc2b5810c)
+- for tower, just need else if() and call the handledestruction()
+- step 3, enable gamemode in the health component, which is class AToonTanksGameMode* GameMode;
+- use actor died if hp is 0 or less
+- ![屏幕截图 2024-10-06 142612](https://github.com/user-attachments/assets/3ec2a9e5-456f-41c7-9521-9ee15705d5f9)
+
+- 
+
+
 
 
 
