@@ -205,7 +205,7 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - create a blueprint base on this c++ class, called ToonBaseGame
 - delte the tank in the scene
 - change the gamemode to the created one, in project settings.
-- let game strater to be the pawn tank appear.
+- let game strater to be the pawn tank appear, change the default pawn class in bp_toonbasegamemode
 
 
 
