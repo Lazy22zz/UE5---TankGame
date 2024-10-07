@@ -228,8 +228,51 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - step 3, enable gamemode in the health component, which is class AToonTanksGameMode* GameMode;
 - use actor died if hp is 0 or less
 - ![屏幕截图 2024-10-06 142612](https://github.com/user-attachments/assets/3ec2a9e5-456f-41c7-9521-9ee15705d5f9)
+-
+28， create a player controller class
+- purpose: Enable/disable input, Set the mouse cursor type
+- step 1, for Enable/disable input
+- create a public function :void SetPlayerEnabledState(bool bPlayerEnabled);
+- using if bPlayerEnabled, GetPawn()->EnableInput(this); and GetPawn()->DisableInput(this);
+- then in gamemode.h, we need to use this new function to replace
+- if (Tank->GetTankPlayerController())
+        {
+            Tank -> DisableInput(Tank->GetTankPlayerController());
+            Tank->GetTankPlayerController()->bShowMouseCursor = false;
+        }
+- ![屏幕截图 2024-10-07 091714](https://github.com/user-attachments/assets/eaef2bec-5a95-4822-9626-8cdc49a11f37)
+- create a new class: class AToonTanksPlayerController* ToonTanksPlayerController;
+- using UGamePlayStatics::GetPlayerController
+- ToonTanksPlayerController = Cast<AToonTanksPlayerController>(UGameplayStatics::GetPlayerController(this,0));
+- replace by
+- ![屏幕截图 2024-10-07 092231](https://github.com/user-attachments/assets/266126db-790a-4054-8a40-208a579a3bf2)
+- step 2, let :bShowMouseCursor = bPlayerEnabled; in void AToonTanksPlayerController::SetPlayerEnabledState(bool bPlayerEnabled)
+- and in bp_controller, change default mouse cursor to crosshair
+-
+29, starting the game
+- purpose : disable the input when game start, until timer count to be it is.
+- create a gamestart() function in gamemode.h
+- then put it in beginplay()
+- move rest in the gamestrt()
+- ![屏幕截图 2024-10-07 094659](https://github.com/user-attachments/assets/c5114ba3-d9f3-4c7a-8125-169a50bdb299)
+- set a timer:
+- using GetWorldTimerManager().SetTimer(Timer Handle, Timer Delegate, Play Rate, Looping)
+- Timer Handle : need to initialize, such as FTimerHandle PlayerEnableTimerHandle;
+- Timer Delegate : need to initialize by FTimerDelegate::CreateUObject()
+- Play Rate : Time_Start
+- Looping : ture or flase
+- for FTimerDelegate::CreateUObject(User Object, Callback, Inputs)
+- User Object: ToonTanksPlayerController
+- Call back: &AToonTanksPlayerController::SetPlayerEnabledState
+- Inputs: true
+- ![屏幕截图 2024-10-07 100810](https://github.com/user-attachments/assets/abc51625-84e8-463d-8602-812ead4e93e0)
+-
+30, 
 
-- 
+
+
+
+
 
 
 
