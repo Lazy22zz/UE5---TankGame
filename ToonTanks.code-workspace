@@ -11,13 +11,7 @@
 	],
 	"settings": {
 		"typescript.tsc.autoDetect": "off",
-		"npm.autoDetect": "off",
-		"cSpell.words": [
-			"Gameplay",
-			"Subobject",
-			"UPROPERTY"
-		],
-		"dotnet.defaultSolution": "disable"
+		"npm.autoDetect": "off"
 	},
 	"extensions": {
 		"recommendations": [
