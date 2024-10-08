@@ -267,7 +267,13 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - Inputs: true
 - ![屏幕截图 2024-10-07 100810](https://github.com/user-attachments/assets/abc51625-84e8-463d-8602-812ead4e93e0)
 -
-30, 
+30, the game start widget
+- Show text on the screen and counter timer.
+- craeate a blueprintimplementevent in protect function under the gamemode.
+- create a new foler, widgets, create a new user interfact, which is widget blueprint
+- ![屏幕截图 2024-10-07 205531](https://github.com/user-attachments/assets/64729ece-badc-40f4-805c-de9f4351425a)
+- 
+
 
 
 
