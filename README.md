@@ -273,6 +273,18 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - create a new foler, widgets, create a new user interfact, which is widget blueprint
 - ![屏幕截图 2024-10-07 205531](https://github.com/user-attachments/assets/64729ece-badc-40f4-805c-de9f4351425a)
 - 
+31， Counte down timer
+- In Widget -> graph
+- Event pre construct : such like construct in c++
+- Event construct : such like startgame
+- Event Tick : Tick function
+- let countdown time is 3.0
+- ![屏幕截图 2024-10-08 100732](https://github.com/user-attachments/assets/c143ab40-7f50-41cd-bf3e-deea209411a8)
+- using switch on int for multi conditions
+-
+32, Display countdown Time
+- enable the widget text is variable
+- in buleprint get text -> set text(widget)
 
 
 
