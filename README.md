@@ -295,6 +295,7 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - ![屏幕截图 2024-10-08 210552](https://github.com/user-attachments/assets/fa19c50c-379f-469e-a1dc-05ce77ef35ee)
 - 3, and when the mode start, set Nums_Tower = GetTowerCount()
 - 4, each time a tower destoryed, if num_tower == 0, then gameover(true);
+- 
 
 
 
