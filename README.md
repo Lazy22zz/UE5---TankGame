@@ -285,6 +285,17 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 32, Display countdown Time
 - enable the widget text is variable
 - in buleprint get text -> set text(widget)
+-
+33，winning and losing
+- losing: create a function: Gameover(bool bWonGame) and use it in the Actordied() {in the gamemode}
+- winning : need to count how many towers died
+- 0, create a int32 Num_Tower;
+- 1, create a gettowercount() function to dynamic count total nums of tower
+- 2, using UGameplayStatics::GetAllActorsOfClass( World Context Object, TSubclassOf<AActor>, TArray<AActor*>)
+- ![屏幕截图 2024-10-08 210552](https://github.com/user-attachments/assets/fa19c50c-379f-469e-a1dc-05ce77ef35ee)
+- 3, and when the mode start, set Nums_Tower = GetTowerCount()
+- 4, each time a tower destoryed, if num_tower == 0, then gameover(true);
+
 
 
 
