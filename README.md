@@ -295,7 +295,21 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - ![屏幕截图 2024-10-08 211026](https://github.com/user-attachments/assets/85fb46e2-789c-475a-82d1-15fa62549069)
 - 3, and when the mode start, set Nums_Tower = GetTowerCount()
 - 4, each time a tower destoryed, if num_tower == 0, then gameover(true);
-- 
+-
+34, add gameover uhd
+- ![屏幕截图 2024-10-10 103812](https://github.com/user-attachments/assets/944c25d2-9248-4d4f-842b-ac558a93d23f)
+-
+35, add specifical effects
+- 1, hit particales
+- enable the particles in projectile.h : UPROPERTY(EditAnywhere, category = "Combat") class UParticleSystem* HitParticle;
+- using UGameplayStatics::SpawnEmitterAtLocation(World Context Object, Particle System, Location, Rotation)
+- World Context Object : this
+- Particle System : HitParticle
+- Location:GetActorLocation()
+- Rotation : GetActRotation()
+-
+36,
+
 
 
 
