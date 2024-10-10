@@ -70,6 +70,6 @@ void AToonTanksGameMode::GameStart()
 int32 AToonTanksGameMode::GetTowerCount()
 {
     TArray<AActor*> Towers;
-    UGameplayStatics::GetAllActorsOfClass(this, ATower::StaticClass(), Towers);
+    Num_Towers = UGameplayStatics::GetAllActorsOfClass(this, ATower::StaticClass(), Towers);
     return Towers.Num();
 }

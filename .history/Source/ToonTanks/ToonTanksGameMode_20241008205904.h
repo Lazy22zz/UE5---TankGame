@@ -36,5 +36,5 @@ private:
 	float Time_Start = 3.f;
 
 	int32 Num_Towers = 0;
-	int32 GetTowerCount();
+	int32 
 };
