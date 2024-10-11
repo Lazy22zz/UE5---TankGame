@@ -41,7 +41,7 @@ void ABasePawn::Fire(){
 	FVector ProjectileSpawnPointLocation = ProjectileSpawnPoint->GetComponentLocation();
 	FRotator ProjectileSpawnPointRotation = ProjectileSpawnPoint->GetComponentRotation();
 	
-	AProjectile* Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPointLocation, ProjectileSpawnPointRotation); // auto, unknow type
+	auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass, ProjectileSpawnPointLocation, ProjectileSpawnPointRotation); // auto, unknow type
 	Projectile->SetOwner(this);
 }
 
@@ -58,9 +58,9 @@ void ABasePawn::HandleDestruction()
 	}
 	
 
-	if (DeathCameraClass)
+	if (DeathCameraShakeClass)
 	{
-		GetWorld()->GetFirstPlayerController()->ClientStartCameraShake(DeathCameraClass);
+		GetWorld()->GetFirstPlayerController()->ClientPlayCameraShake(DeathCameraShakeClass);
 	}
 
 }

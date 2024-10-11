@@ -7,6 +7,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "Projectile.generated.h"
 
+class USoundBase;
 
 UCLASS()
 class TOONTANKS_API AProjectile : public AActor
@@ -38,18 +39,16 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Damage Amount")
 	float Damage_Amount = 50.f;
 
-	UPROPERTY(EditAnywhere, Category = "combat")
+	UPROPERTY(EditAnywhere, category = "Combat")
 	class UParticleSystem* HitParticle;
 
-	UPROPERTY(VisibleAnywhere, Category = "combat")
+	UPROPERTY(VisibleAnywhere, category = "combat")
 	class UParticleSystemComponent* ParticleSysCom;
 
-	UPROPERTY(EditAnywhere, Category = "combat")
-	class USoundBase* LaunchSound;
+	UPROPERTY(EditAnywhere, category = "combat")
+	USoundBase* LaunchSound;
 
-	UPROPERTY(EditAnywhere, Category = "combat")
-	class USoundBase* HitSound;
+	UPROPERTY(EditAnywhere, category = "combat")
+	USoundBase* HitSound;
 
-	UPROPERTY(EditAnywhere, Category = "combat")
-	TSubclassOf< class UCameraShakeBase> HitCameraShakeClass;
 };

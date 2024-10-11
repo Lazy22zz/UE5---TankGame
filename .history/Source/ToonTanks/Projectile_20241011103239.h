@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "Particles/ParticleSystemComponent.h"
+#include "Camera/CameraShakeBase.h"
 #include "Projectile.generated.h"
 
 

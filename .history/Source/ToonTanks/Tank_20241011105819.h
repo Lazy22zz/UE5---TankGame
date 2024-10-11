@@ -29,8 +29,6 @@ public:
 	// get private playercontroller 
 	APlayerController* GetTankPlayerController() const;
 
-	bool bAlive = true;
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -61,6 +59,7 @@ private:
 	// enable playercontroller
 	APlayerController* TankPlayerController;
 
-	
+	bool bAlive = true;
+
 
 };
