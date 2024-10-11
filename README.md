@@ -314,7 +314,33 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - using UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
 - but, need to create the deathParticle : UPROPERTY(VisibleAnywhere, category = "Components") class UParticleSystem* DeathParticle;
 - ![屏幕截图 2024-10-10 215331](https://github.com/user-attachments/assets/e3bf1b2c-04f3-422a-8fa0-75811370ed81)
-- 
+-
+36, play sound
+- using UGameplayStatics::PlaySoundAtLocation(World Context Objec, sound, location)
+- for sound, use: class USoundBase* LaunchSound;
+-
+37, Camera Shake
+- create a camerashake blueprint(in ue 5.4.4, its legacy camera shake, which contains oscillation
+- ![屏幕截图 2024-10-11 102426](https://github.com/user-attachments/assets/c77abf90-0e96-40b5-9041-4f7cf1312439)
+- class UCameraShakeBase* HitCameraShake;
+- however, we need to use ClientCameraShake, which needs TSubclassof, so we nned to reidentify it as
+- TSubclassof< class UCameraShakeBase> HitCameraShakeClass;
+- then, we need UWorld::GetFirstPlayerController to point to the ClientCameraShake;
+- so it will be like : GetWorld() -> GetFirstPlayerController() -> ClientStartCameraShake(HitCameraShakeClass);
+- so did the basepawn for creating the deathcameraclass;
+-
+38, end
+- 1, adjust the camera lag:
+-  ![屏幕截图 2024-10-11 105616](https://github.com/user-attachments/assets/97bf5e57-4faf-42ac-9694-290129994f72)
+-  2, fix if player die, then tower still attack
+-  create a private bool bAlive, and in HandleDestruction(), make it false
+-  if bAlive is false, then onfire() stop
+-  3, make auto to specific class
+-  ![屏幕截图 2024-10-11 110442](https://github.com/user-attachments/assets/c494cebb-098f-4cc4-a52f-611de7052afd)
+
+
+
+
 
 
 
