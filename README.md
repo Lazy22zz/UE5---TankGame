@@ -307,8 +307,16 @@ https://github.com/user-attachments/assets/3f8b62ac-3bc1-4a8f-b583-25b62184caa7
 - Particle System : HitParticle
 - Location:GetActorLocation()
 - Rotation : GetActRotation()
--
-36,
+- 2， smoke trail
+- ![屏幕截图 2024-10-10 211235](https://github.com/user-attachments/assets/0e7d3cf6-a211-43dc-9183-ab8b1cd05494)
+- Using ParticleSysCom = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Projectile Particle")); ParticleSysCom -> SetupAttachment(RootComponent);
+- 3, death particle
+- using UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
+- but, need to create the deathParticle : UPROPERTY(VisibleAnywhere, category = "Components") class UParticleSystem* DeathParticle;
+- ![屏幕截图 2024-10-10 215331](https://github.com/user-attachments/assets/e3bf1b2c-04f3-422a-8fa0-75811370ed81)
+- 
+
+
 
 
 
