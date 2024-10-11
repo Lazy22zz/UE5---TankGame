@@ -21,7 +21,7 @@ AProjectile::AProjectile()
 	ProjectileMoveComp -> InitialSpeed = 1300.f;
 
 	ParticleSysCom = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Projectile Particle"));
-	ParticleSysCom -> SetupAttachment(RootComponent);
+	ParticleSysCom -> setupSetupAttachment(RootComponent);
 
 }
 

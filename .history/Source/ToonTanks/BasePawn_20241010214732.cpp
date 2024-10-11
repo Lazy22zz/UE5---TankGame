@@ -27,6 +27,8 @@ ABasePawn::ABasePawn()
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>(TEXT("Spawn Point"));
 	ProjectileSpawnPoint -> SetupAttachment(TurretMesh);
 
+	DeathParticle = CreateDefaultSubobject<UParticleSystem>(TEXT("Death Particle"));
+	DeathParticle -> SetupAttachment(RootComponent);
 
 }
 
@@ -47,7 +49,7 @@ void ABasePawn::Fire(){
 
 void ABasePawn::HandleDestruction()
 {
-	if (DeathParticles)
+	if (DeathParticle)
 	{
 		UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
 	}
