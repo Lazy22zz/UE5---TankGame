@@ -1,6 +1,6 @@
 # Tank
 - project
-- 
+- unzip the zip file to play.
 1, compoment, attachment, rootcompoment
   - ![屏幕截图 2024-09-26 202044](https://github.com/user-attachments/assets/b41cb2ea-141b-433b-a16e-504c509ac466)
   - 
