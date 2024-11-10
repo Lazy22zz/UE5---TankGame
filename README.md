@@ -1,6 +1,8 @@
 # Tank
 - project
+- https://drive.google.com/file/d/1CeEXi77Hr3xa9ffGEoy6bneCIWc-39wZ/view?usp=sharing
 - unzip the zip file to play.
+- 
 1, compoment, attachment, rootcompoment
   - ![屏幕截图 2024-09-26 202044](https://github.com/user-attachments/assets/b41cb2ea-141b-433b-a16e-504c509ac466)
   - 
